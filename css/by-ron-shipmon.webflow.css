@@ -280,9 +280,9 @@
 
 .article-card {
   transition: transform .2s;
-  padding:20px;
+  padding:0px;
   background: #fff;
-  border-radius: 10px;
+  
 
   text-align: center;
   cursor: pointer;
@@ -302,7 +302,6 @@
 .article-card img {
   width: 100%;
   max-width: 320px;
-  border-radius: 0;
   object-fit: cover;
   aspect-ratio: 3 / 2;
 }
