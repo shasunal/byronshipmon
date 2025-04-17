@@ -73,28 +73,32 @@
         .then((res) => res.json())
         .then((data) => {
           const container = document.querySelector(".articles-grid");
-          if (!container) {
-            console.warn("⚠️ .articles-grid not found.");
-            return;
-          }
+          if (!container) return;
   
           container.innerHTML = "";
   
           data.forEach((item) => {
             const card = document.createElement("div");
             card.className = "article-card";
+            card.style.cursor = "pointer";
+            card.style.textAlign = "center";
+  
+            card.onclick = () => {
+              window.open(item.DOCUMENT, "_blank");
+            };
+  
             card.innerHTML = `
-              <img src="${item.IMAGE}" alt="${item.TITLE}" style="width:100%; object-fit:cover; aspect-ratio: 3/2;">
-              <h3>${item.TITLE}</h3>
-              <a href="${item.DOCUMENT}" target="_blank">View PDF</a>
-              <p style="font-size:12px; color:#777;">${item.TAGS}</p>
+              <img src="${item.IMAGE}" alt="${item.TITLE}" style="width:100%; max-width:300px; margin:auto; object-fit:cover; aspect-ratio: 3/2; border-radius: 8px;">
+              <h3 style="margin-top: 10px;">${item.TITLE}</h3>
             `;
+  
             container.appendChild(card);
           });
         })
         .catch((err) => console.error("❌ Failed to load JSON:", err));
     });
   </script>
+  
   
 
 
