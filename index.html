@@ -2,7 +2,7 @@
 <html data-wf-page="67f96728e1f00bb0acd684d1" data-wf-site="67f96728e1f00bb0acd684ca">
 <head>
 
-  <script src="https://cdn.jsdelivr.net/npm/tabletop@1.6.0/tabletop.min.js"></script>
+  
 
   <meta charset="utf-8">
   <title>Ron Shipmon | cultural essay writer portfolio</title>
@@ -53,32 +53,35 @@
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=67f96728e1f00bb0acd684ca" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      Tabletop.init({
-        key: '13ci0PDbjcTWoPFTSEMMY-IGiQVp8Uimq4WIuefKdUM8',
-        callback: showData,
-        simpleSheet: true
-      });
+  <script src="https://cdn.jsdelivr.net/npm/tabletop@1.6.0/tabletop.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    Tabletop.init({
+      key: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS4M6yCR9s3fhALzCBvj8gq4sfKDC3fw-pDAWxvTWd7Ww_hng2BuY-fYmH6zeXl7s78W7dllVStuomX/pubhtml',
+      callback: showData,
+      simpleSheet: true
     });
-  
-    function showData(data) {
-      const container = document.getElementById('sheet-data');
-      container.innerHTML = ''; // clear existing
-  
-      data.forEach(item => {
-        container.innerHTML += `
-          <div class="project">
-            <h2>${item.TITLE}</h2>
-            <img src="${item.IMAGE}" alt="${item.TITLE}" style="max-width:300px;">
-            <p><strong>Tags:</strong> ${item.TAGS}</p>
-            <p><a href="${item.DOCUMENT}" target="_blank">Read Document</a></p>
-          </div>
-          <hr/>
-        `;
-      });
-    }
-  </script>
+  });
+
+  function showData(data) {
+    const container = document.getElementById('sheet-data');
+    container.innerHTML = '';
+
+    data.forEach(item => {
+      container.innerHTML += `
+        <div class="project">
+          <h2>${item.TITLE}</h2>
+          <img src="${item.IMAGE}" style="max-width: 300px;" />
+          <p><strong>Tags:</strong> ${item.TAGS}</p>
+          <p><a href="${item.DOCUMENT}" target="_blank">Read the full document</a></p>
+        </div>
+        <hr/>
+      `;
+    });
+  }
+</script>
+
   
 
 
