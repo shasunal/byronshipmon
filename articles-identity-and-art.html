@@ -78,26 +78,23 @@
           container.innerHTML = "";
   
           data.forEach((item) => {
-            const card = document.createElement("div");
-            card.className = "article-card";
-            card.style.cursor = "pointer";
-            card.style.textAlign = "center";
+            const link = document.createElement("a");
+            link.href = item.DOCUMENT;
+            link.target = "_blank";
+            link.className = "article-card";
   
-            card.onclick = () => {
-              window.open(item.DOCUMENT, "_blank");
-            };
-  
-            card.innerHTML = `
-              <img src="${item.IMAGE}" alt="${item.TITLE}" style="width:100%; max-width:300px; margin:auto; object-fit:cover; aspect-ratio: 3/2; border-radius: 8px;">
-              <h3 style="margin-top: 10px;">${item.TITLE}</h3>
+            link.innerHTML = `
+              <img src="${item.IMAGE}" alt="${item.TITLE}" class="article-img">
+              <h3 class="article-title">${item.TITLE}</h3>
             `;
   
-            container.appendChild(card);
+            container.appendChild(link);
           });
         })
         .catch((err) => console.error("❌ Failed to load JSON:", err));
     });
   </script>
+  
   
   
 
