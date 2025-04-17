@@ -39,9 +39,9 @@
   </div>
   <section class="filterssection">
     <div id="top" class="filters">
-      <a data-category="features" href="#" class="filterbtn w-button">Features</a>
-      <a data-category="advice" href="#" class="filterbtn w-button">Art Advice</a>
-      <a data-category="all" href="#" class="filterbtn w-button">All</a>
+      <a data-category="Features" href="#" class="filterbtn w-button">Features</a>
+      <a data-category="Art Advice" href="#" class="filterbtn w-button">Art Advice</a>
+      <a data-category="All" href="#" class="filterbtn w-button">All</a>
     </div>
   </section>
   <section class="articlessection">
@@ -68,32 +68,72 @@
 
 
   <script>
+    let allData = [];
+  
     window.addEventListener("DOMContentLoaded", function () {
       fetch("articles.json")
         .then((res) => res.json())
         .then((data) => {
-          const container = document.querySelector(".articles-grid");
-          if (!container) return;
-  
-          container.innerHTML = "";
-  
-          data.forEach((item) => {
-            const link = document.createElement("a");
-            link.href = item.DOCUMENT;
-            link.target = "_blank";
-            link.className = "article-card";
-  
-            link.innerHTML = `
-              <img src="${item.IMAGE}" alt="${item.TITLE}" class="article-img">
-              <h3 class="article-title">${item.TITLE}</h3>
-            `;
-  
-            container.appendChild(link);
-          });
+          allData = data;
+          renderArticles(allData); // initial render
+          setupFilterButtons();
         })
         .catch((err) => console.error("❌ Failed to load JSON:", err));
     });
+  
+    function renderArticles(data) {
+      const container = document.querySelector(".articles-grid");
+      container.innerHTML = "";
+  
+      data.forEach((item) => {
+        const link = document.createElement("a");
+        link.href = item.DOCUMENT;
+        link.target = "_blank";
+        link.className = "article-card";
+  
+        link.innerHTML = `
+          <img src="${item.IMAGE}" alt="${item.TITLE}" class="article-img">
+          <h3 class="article-title">${item.TITLE}</h3>
+        `;
+  
+        container.appendChild(link);
+      });
+    }
+  
+    function setupFilterButtons() {
+      const buttons = document.querySelectorAll(".filterbtn");
+  
+      buttons.forEach(button => {
+        button.addEventListener("click", () => {
+          const category = button.getAttribute("data-category");
+          filterArticles(category);
+          highlightButton(button);
+        });
+      });
+    }
+  
+    function filterArticles(category) {
+      if (category === "all") {
+        renderArticles(allData);
+      } else {
+        const filtered = allData.filter(item => item.TAGS === category);
+        renderArticles(filtered);
+      }
+    }
+  
+    function highlightButton(activeButton) {
+      const buttons = document.querySelectorAll(".filterbtn");
+  
+      buttons.forEach(btn => {
+        btn.style.backgroundColor = "white";
+        btn.style.color = "black";
+      });
+  
+      activeButton.style.backgroundColor = "#000";
+      activeButton.style.color = "#fff";
+    }
   </script>
+  
   
   
   
