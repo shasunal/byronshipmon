@@ -56,32 +56,33 @@
   <script src="js/webflow.js" type="text/javascript"></script>
 
   <!-- Load Tabletop.js -->
-<script src="https://cdn.jsdelivr.net/npm/tabletop@1.6.0/tabletop.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tabletop@1.6.0/tabletop.min.js"></script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    Tabletop.init({
-      key: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS4M6yCR9s3fhALzCBvj8gq4sfKDC3fw-pDAWxvTWd7Ww_hng2BuY-fYmH6zeXl7s78W7dllVStuomX/pubhtml',
-      simpleSheet: true,
-      callback: function (data) {
-        const container = document.querySelector('.articles-grid');
-        container.innerHTML = ''; // Clear placeholders
-
-        data.forEach(item => {
-          const card = document.createElement('div');
-          card.className = 'article-card';
-          card.innerHTML = `
-            <img src="${item.Image}" alt="${item.Title}" style="width:100%; object-fit:cover; aspect-ratio: 3/2; border-radius: 8px;">
-            <h3 style="margin: 10px 0;">${item.Title}</h3>
-            <a href="${item.PDF}" target="_blank" style="color: #2f2f2f;">View PDF</a>
-          `;
-          container.appendChild(card);
-        });
-      }
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      Tabletop.init({
+        key: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS4M6yCR9s3fhALzCBvj8gq4sfKDC3fw-pDAWxvTWd7Ww_hng2BuY-fYmH6zeXl7s78W7dllVStuomX/pubhtml',
+        simpleSheet: true,
+        callback: function (data) {
+          const container = document.querySelector('.articles-grid');
+          container.innerHTML = ''; // Clear existing content
+  
+          data.forEach(item => {
+            const card = document.createElement('div');
+            card.classList.add('article-card');
+            card.innerHTML = `
+              <img src="${item.IMAGE}" alt="${item.TITLE}" style="width:100%; object-fit:cover; aspect-ratio: 3/2; border-radius: 8px;">
+              <h3 style="margin: 10px 0;">${item.TITLE}</h3>
+              <a href="${item.DOCUMENT}" target="_blank" style="color: #2f2f2f;">View PDF</a>
+              <p style="font-size: 12px; color: #666;">${item.TAGS}</p>
+            `;
+            container.appendChild(card);
+          });
+        }
+      });
     });
-  });
-</script>
-
+  </script>
+  
 
   
 
