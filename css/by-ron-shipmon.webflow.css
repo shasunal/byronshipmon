@@ -284,7 +284,6 @@
   align-items: center;
   text-decoration: none;
   background: white;
-  border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.08); /* ✅ default shadow */
   padding: 12px;
   width: 100%;
