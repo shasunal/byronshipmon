@@ -3,7 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <title>Content Manager</title>
+
+    <!-- 🧠 THIS LINE TELLS CMS WHERE config.yml IS -->
+    <script>window.CMS_MANUAL_INIT = true;</script>
+
+    <!-- CMS library -->
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   </head>
-  <body></body>
+  <body>
+    <script>
+      NetlifyCmsApp.init();
+    </script>
+  </body>
 </html>
