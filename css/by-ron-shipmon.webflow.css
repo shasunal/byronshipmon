@@ -301,9 +301,11 @@
 
 .article-card img {
   width: 100%;
-  max-width: 320px;
-  object-fit: cover;
-  aspect-ratio: 3 / 2;
+  max-width: 300px;
+  height: auto; /* ✅ This shows full height */
+  object-fit: contain; /* ✅ Keeps the full image visible */
+  transition: transform 0.2s ease;
+  margin-bottom: 12px;
 }
 
 
