@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <title>Content Manager</title>
-    <!-- Explicitly link to config.yml -->
     <link rel="cms-config-url" type="text/yaml" href="/admin/config.yml" />
-    <!-- Load Netlify CMS -->
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   </head>
   <body>
+    <!-- 🔥 This is the missing piece CMS needs -->
+    <script>
+      NetlifyCmsApp.init();
+    </script>
   </body>
 </html>
