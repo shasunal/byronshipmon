@@ -751,3 +751,34 @@
 }
 
 
+/* 🎯 Consistent and responsive social icon sizing */
+.sociallink {
+  width: 32px;
+  height: 32px;
+  margin: 0 10px;
+  flex-shrink: 0;
+}
+
+/* Tablet */
+@media screen and (max-width: 991px) {
+  .sociallink {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+  .sociallink {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Tiny screens */
+@media screen and (max-width: 479px) {
+  .sociallink {
+    width: 48px;
+    height: 48px;
+  }
+}
