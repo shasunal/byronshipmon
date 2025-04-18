@@ -49,9 +49,9 @@
 }
 
 .heading {
-  font-family: 'Oswald', sans-serif;
-  font-weight: 600;
-  font-size: 7rem;
+  font-family: 'Oswald', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 10rem !important;
   color: white;
   line-height: 1;
   white-space: nowrap;
@@ -61,7 +61,7 @@
 }
 
 .text-block {
-  font-size: 1.4rem;
+  font-size: 1.4rem !important;
   margin-bottom: 30px;
   color: black;
   max-width: 90%;
