@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap');
+
 .container {
   background-color: #fff;
   font-family: PT Sans, sans-serif;
@@ -45,6 +47,8 @@
 }
 
 .heading {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
   font-size: 5.5rem;
   color: white;
   line-height: 1;
@@ -338,6 +342,7 @@
 
 .body {
   box-shadow: 0 2px 5px #0000001a;
+  font-family: 'Oswald', sans-serif;
 }
 
 .heading-3 {
