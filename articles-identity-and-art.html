@@ -75,8 +75,25 @@
         .then((res) => res.json())
         .then((data) => {
           allData = data;
-          renderArticles(allData); // initial render
-          setupFilterButtons();
+          
+          const params = new URLSearchParams(window.location.search);
+          const featured = params.get("featured");
+          let defaultCategory = "All";
+          if (featured === "true") {
+            defaultCategory = "Features";
+          }
+  
+          // Render filtered articles
+          const filteredData = (defaultCategory === "All")
+            ? allData
+            : allData.filter(item => item.TAGS === defaultCategory);
+          renderArticles(filteredData);
+  
+          // Highlight correct filter button
+          const matchingBtn = document.querySelector(`.filterbtn[data-category="${defaultCategory}"]`);
+          if (matchingBtn) highlightButton(matchingBtn);
+  
+          setupFilterButtons(); // enable button clicks
         })
         .catch((err) => console.error("❌ Failed to load JSON:", err));
     });
@@ -107,19 +124,13 @@
         button.addEventListener("click", (e) => {
           e.preventDefault();
           const category = button.getAttribute("data-category");
-          filterArticles(category);
+          const filtered = (category === "All")
+            ? allData
+            : allData.filter(item => item.TAGS === category);
+          renderArticles(filtered);
           highlightButton(button);
         });
       });
-    }
-  
-    function filterArticles(category) {
-      if (category === "All") {
-        renderArticles(allData);
-      } else {
-        const filtered = allData.filter(item => item.TAGS === category);
-        renderArticles(filtered);
-      }
     }
   
     function highlightButton(activeButton) {
@@ -134,6 +145,7 @@
       activeButton.style.color = "#fff";
     }
   </script>
+  
   
   
 
