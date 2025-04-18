@@ -45,17 +45,21 @@
 }
 
 .heading {
-  font-size: 4rem;
+  font-size: 5.5rem;
+  color: white;
   line-height: 1;
-  white-space: nowrap; /* ✅ prevent RON SHIPMON from breaking onto two lines */
+  white-space: nowrap;
+  /* ✅ prevent RON SHIPMON from breaking onto two lines */
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   margin: 0 0 20px;
 }
 
 .text-block {
-  font-size: 1rem;
+  font-size: 1.4rem;
   margin-bottom: 30px;
-  max-width: 80%;
+  color: black;
+  max-width: 90%;
+  margin-bottom: 40px;
   line-height: 1.4;
 }
 
@@ -115,7 +119,8 @@
   padding-right: 0;
 }
 
-.image-3, .image-4 {
+.image-3,
+.image-4 {
   width: 2%;
   margin-right: 0;
 }
@@ -145,7 +150,10 @@
   display: flex;
 }
 
-.text-field, .text-field-2, .text-field-3, .text-field-4 {
+.text-field,
+.text-field-2,
+.text-field-3,
+.text-field-4 {
   text-align: left;
   width: 48%;
 }
@@ -166,7 +174,8 @@
   display: flex;
 }
 
-.text-block-5, .text-block-6 {
+.text-block-5,
+.text-block-6 {
   flex-flow: column;
   display: flex;
 }
@@ -276,24 +285,28 @@
   align-items: center;
   text-decoration: none;
   background: white;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08); /* ✅ default shadow */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  /* ✅ default shadow */
   padding: 12px;
   width: 100%;
-  max-width: 260px; /* ✅ slightly smaller card size */
+  max-width: 260px;
+  /* ✅ slightly smaller card size */
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .article-card:hover {
   transform: scale(1.03);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); 
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
 
 
 .article-card img {
-  height: 320px; /* set a fixed height */
+  height: 320px;
+  /* set a fixed height */
   width: 100%;
-  object-fit: contain; /* or use contain if you don’t want any cropping */
+  object-fit: contain;
+  /* or use contain if you don’t want any cropping */
   border-radius: 6px;
   display: block;
 }
@@ -315,7 +328,8 @@
   font-weight: 600;
   margin-top: 16px;
   color: #222;
-  min-height: 50px; /* makes sure titles sit in the same height space */
+  min-height: 50px;
+  /* makes sure titles sit in the same height space */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -345,7 +359,8 @@
   display: flex;
 }
 
-.button-2, .topbtn {
+.button-2,
+.topbtn {
   background-color: #2c3d50;
 }
 
@@ -388,7 +403,9 @@
   display: inline-block;
 }
 
-.nav-link-2, .nav-link-3, .nav-link-3.w--current {
+.nav-link-2,
+.nav-link-3,
+.nav-link-3.w--current {
   padding-left: 40px;
   padding-right: 40px;
 }
@@ -428,7 +445,7 @@
     margin-right: 15%;
   }
 
-  
+
 
   .sociallink {
     width: 1.5rem;
@@ -476,7 +493,10 @@
     display: flex;
   }
 
-  .text-field, .text-field-2, .text-field-3, .text-field-4 {
+  .text-field,
+  .text-field-2,
+  .text-field-3,
+  .text-field-4 {
     width: 100%;
   }
 
@@ -495,7 +515,7 @@
     margin-right: 60px;
   }
 
-  
+
 
   .sociallink {
     width: 5%;
@@ -529,16 +549,7 @@
   }
 
   .heading {
-    justify-content: center;
-    align-items: center;
-    margin-top: 0;
-    margin-bottom: 60px;
-    padding-top: 0;
-    padding-bottom: 0;
-    font-family: Oswald, sans-serif;
-    font-size: 2.8rem;
-    font-weight: 500;
-    display: flex;
+    font-size: 4rem;
   }
 
   .text-block {
@@ -546,7 +557,7 @@
     margin: 0;
     margin-bottom: 20px;
     padding-bottom: 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
     display: flex;
   }
 
@@ -561,7 +572,10 @@
     margin-right: 5%;
   }
 
-  .text-field, .text-field-2, .text-field-3, .text-field-4 {
+  .text-field,
+  .text-field-2,
+  .text-field-3,
+  .text-field-4 {
     width: 100%;
     margin-bottom: 0;
   }
@@ -605,7 +619,7 @@
     padding-left: 10px;
   }
 
-  
+
 
   .text-field-6 {
     margin-bottom: 0;
@@ -669,8 +683,8 @@
   }
 
   .nav-menu-2 {
-    width: Infinity% ;
-    height: Infinity% ;
+    width: Infinity%;
+    height: Infinity%;
     background-color: #fff;
     flex-flow: column;
     justify-content: center;
@@ -690,7 +704,9 @@
     background-color: #fff;
   }
 
-  .nav-link, .nav-link-2, .nav-link-3 {
+  .nav-link,
+  .nav-link-2,
+  .nav-link-3 {
     flex-flow: column;
     justify-content: center;
     align-items: center;
@@ -817,4 +833,3 @@
   align-items: center;
   gap: 20px;
 }
-
