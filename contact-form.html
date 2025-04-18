@@ -38,7 +38,10 @@
   <section class="contactsection">
     <div class="text-block-3"><em>Get in touch</em></div>
     <div class="w-form">
-      <form id="wf-form-Email-contact-Form" name="wf-form-Email-contact-Form" data-name="Email contact Form" method="get" data-wf-page-id="67f9775ef71971ad5ffc4ec2" data-wf-element-id="97691a26-d23b-786c-16e1-a9f2c25cf034">
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" /> <!-- ✳️ Required -->
+        <input type="hidden" name="bot-field" /> <!-- ✳️ Spam protection -->
+      
         <div class="formwrapper"><input class="text-field w-input" maxlength="256" name="First-Name" data-name="First Name" placeholder="Enter first name *" type="text" id="First-Name-2" required=""><input class="text-field-2 w-input" maxlength="256" name="field" data-name="Field" placeholder="Enter last name *" type="text" id="field" required=""><input class="text-field-3 w-input" maxlength="256" name="field-2" data-name="Field 2" placeholder="Email *" type="email" id="field-2" required=""><input class="text-field-4 w-input" maxlength="256" name="field-3" data-name="Field 3" placeholder="Phone Number *" type="tel" id="field-3" required=""><input class="text-field-6 w-input" maxlength="256" name="field-4" data-name="Field 4" placeholder="Company Name" type="text" id="field-4"><textarea placeholder="Write a Message" maxlength="5000" id="field-7" name="field-7" data-name="Field 7" class="textarea w-input"></textarea><input type="submit" data-wait="Please wait..." class="submit-button w-button" value="Submit"></div>
       </form>
       <div class="w-form-done">
