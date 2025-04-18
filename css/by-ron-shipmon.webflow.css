@@ -799,3 +799,33 @@
     font-size: 1rem;
   }
 }
+
+.heroimage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.herowrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  padding: 20px;
+  width: 90%;
+  color: #fff;
+}
+
+.heroimage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/Breakers-1---18x24.avif');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.6);
+  z-index: 1;
+}
