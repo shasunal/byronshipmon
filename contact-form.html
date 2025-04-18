@@ -37,30 +37,22 @@
   </div>
   <section class="contactsection">
     <div class="text-block-3"><em>Get in touch</em></div>
-    <div class="w-form">
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="contact">
-        <input type="hidden" name="bot-field">
-      
-        <div class="formwrapper">
-          <input class="text-field w-input" maxlength="256" name="First-Name" placeholder="Enter first name *" type="text" required>
-          <input class="text-field-2 w-input" maxlength="256" name="Last-Name" placeholder="Enter last name *" type="text" required>
-          <input class="text-field-3 w-input" maxlength="256" name="Email" placeholder="Email *" type="email" required>
-          <input class="text-field-4 w-input" maxlength="256" name="Phone" placeholder="Phone Number *" type="tel" required>
-          <input class="text-field-6 w-input" maxlength="256" name="Company" placeholder="Company Name" type="text">
-          <textarea class="textarea w-input" name="Message" placeholder="Write a Message *" maxlength="5000" required></textarea>
-          <input type="submit" value="Submit" class="submit-button w-button">
-        </div>
-      </form>
-      
-      
-      <div class="w-form-done">
-        <div>Thank you! Your submission has been received!</div>
-      </div>
-      <div class="w-form-fail">
-        <div>Oops! Something went wrong while submitting the form.</div>
-      </div>
-    </div>
+    <!-- Removed w-form wrapper -->
+<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+  <input type="hidden" name="form-name" value="contact">
+  <input type="hidden" name="bot-field">
+
+  <div class="formwrapper">
+    <input class="text-field w-input" maxlength="256" name="First-Name" placeholder="Enter first name *" type="text" required>
+    <input class="text-field-2 w-input" maxlength="256" name="Last-Name" placeholder="Enter last name *" type="text" required>
+    <input class="text-field-3 w-input" maxlength="256" name="Email" placeholder="Email *" type="email" required>
+    <input class="text-field-4 w-input" maxlength="256" name="Phone" placeholder="Phone Number *" type="tel" required>
+    <input class="text-field-6 w-input" maxlength="256" name="Company" placeholder="Company Name" type="text">
+    <textarea class="textarea w-input" name="Message" placeholder="Write a Message *" maxlength="5000" required></textarea>
+    <input type="submit" value="Submit" class="submit-button w-button">
+  </div>
+</form>
+
     <section class="footersection">
       <div class="footerwrapper"></div>
       <div class="text-block-2"><strong>General Inquiries</strong><br>
