@@ -104,7 +104,8 @@
       const buttons = document.querySelectorAll(".filterbtn");
   
       buttons.forEach(button => {
-        button.addEventListener("click", () => {
+        button.addEventListener("click", (e) => {
+          e.preventDefault();
           const category = button.getAttribute("data-category");
           filterArticles(category);
           highlightButton(button);
@@ -134,11 +135,6 @@
     }
   </script>
   
-  
-  
-  
-
-
   
 
 
