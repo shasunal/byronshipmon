@@ -299,11 +299,11 @@
 
 
 .article-card img {
+  height: 320px; /* set a fixed height */
   width: 100%;
-  height: auto;
-  object-fit: contain; /* ✅ show full image without cropping */
-  margin-bottom: 10px;
+  object-fit: contain; /* or use contain if you don’t want any cropping */
   border-radius: 6px;
+  display: block;
 }
 
 
@@ -318,13 +318,16 @@
 
 .article-title {
   text-decoration: none !important;
-  text-align: center;
   font-family: "PT Sans", sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  margin-top: 12px;
+  margin-top: 16px;
   color: #222;
-  line-height: 1.4;
+  min-height: 50px; /* makes sure titles sit in the same height space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .body {
