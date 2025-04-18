@@ -34,39 +34,31 @@
 }
 
 .herowrapper {
-  z-index: auto;
-  box-sizing: border-box;
-  text-align: center;
-  overflow-wrap: normal;
-  flex-flow: column;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80%;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  line-height: 20%;
-  display: flex;
-  position: relative;
-  inset: 0;
+  text-align: center;
+  height: 100vh;
+  padding: 40px 20px;
+  box-sizing: border-box;
 }
 
 .heading {
-  color: #fff;
-  text-shadow: 0 4px 8px #2725259c;
-  border-radius: 0;
-  margin: 100px 0 220px;
-  padding-bottom: 0;
-  font-family: Oswald, sans-serif;
-  font-size: 10rem;
-  font-weight: 500;
-  line-height: 3rem;
+  font-size: 4rem;
+  line-height: 1;
+  white-space: nowrap; /* ✅ prevent RON SHIPMON from breaking onto two lines */
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  margin: 0 0 20px;
 }
 
 .text-block {
-  font-family: Montserrat, sans-serif;
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  max-width: 80%;
+  line-height: 1.4;
 }
+
 
 .button {
   background-color: #1b354c;
@@ -531,8 +523,8 @@
   .herowrapper {
     height: 100%;
     max-height: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 60px;
+    padding-bottom: 20px;
     display: flex;
   }
 
@@ -544,7 +536,7 @@
     padding-top: 0;
     padding-bottom: 0;
     font-family: Oswald, sans-serif;
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     font-weight: 500;
     display: flex;
   }
@@ -552,8 +544,9 @@
   .text-block {
     flex-flow: row;
     margin: 0;
+    margin-bottom: 20px;
     padding-bottom: 0;
-    font-size: 1.4rem;
+    font-size: 1rem;
     display: flex;
   }
 
