@@ -275,7 +275,7 @@
 
 .articles-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
   padding: 20px 40px;
   justify-items: center;
@@ -303,7 +303,7 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   padding: 12px;
   width: 100%;
-  max-width: 220px;
+  max-width: none;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
