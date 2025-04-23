@@ -1820,7 +1820,7 @@ textarea.w-select {
 
 @media screen and (max-width: 600px) {
   .heading {
-    font-size: 65px!important;
+    font-size: 60px!important;
     
   }
   .heroimage,
@@ -1852,7 +1852,7 @@ textarea.w-select {
 
 @media screen and (max-width: 400px) {
   .heading {
-    font-size: 55px!important;
+    font-size: 50px!important;
     
   }
   .herowrapper {
