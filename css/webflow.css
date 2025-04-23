@@ -1910,14 +1910,20 @@ textarea.w-select {
 }
 
 .herowrapper {
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50vh !important;
-  
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* center everything vertically */
+  align-items: center; /* center everything horizontally */
+  min-height: 40vh !important;
+  max-height: 70vh !important;
+  padding: 80px 20px;
+  text-align: center;
+  background-image: url('Breakers-1---18x24.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
 }
 
 body, html {
