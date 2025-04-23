@@ -1820,71 +1820,31 @@ textarea.w-select {
 
 @media screen and (max-width: 600px) {
   .heading {
-    padding: 0;
-    margin: 0;
-    font-size: 50px!important;
-    
+    font-size: 50px;
   }
-  .heroimage,
-  .herowrapper {
-    padding-top: 65px !important;
-    margin-bottom: -50px !important;
-    padding-bottom: 0 !important;
-    height: auto !important;
+  .text-block-9 {
+    font-size: 16px;
   }
-  html, body {
-    height: auto !important;
-    min-height: auto !important;
+  .w-button {
+    font-size: 14px;
+    padding: 8px 16px;
   }
-  .heroimage {
-    display: block;
-    width: 100%;
-    height: auto !important;
-    max-height: 70vh !important; /* Try 80vh or 70vh if it's still too tall */
-    margin-bottom: -50px !important;
-    padding-bottom: 0 !important;
-    object-fit: cover; /* or cover, depending on the effect you want */
 }
- .w-button {
-  padding: 6px 14px !important;
-  font-size: 14px !important;
-  line-height: 1.2 !important;
-  height: auto !important;
-  min-height: unset !important;
-  border-radius: 3px !important;
-}
-}
+
+
 
 
 @media screen and (max-width: 400px) {
   .heading {
-    font-size: 50px!important;
-    
+    font-size: 42px;
   }
-  .herowrapper {
-    padding-top: 70px !important;
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-    height: auto !important;
-
+  .text-block-9 {
+    font-size: 15px;
   }
-  html, body {
-    height: auto !important;
-    min-height: auto !important;
+  .w-button {
+    font-size: 13px;
+    padding: 6px 12px;
   }
-  .heroimage {
-    display: block;
-    width: 100%;
-    height: auto !important;
-    max-height: 70vh !important; /* Try 80vh or 70vh if it's still too tall */
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-    object-fit: contain; /* or cover, depending on the effect you want */
-}
-.w-button {
-  padding: 5px 10px !important;
-  font-size: 13px !important;
-}
 }
 
 
