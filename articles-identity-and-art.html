@@ -123,7 +123,6 @@
     });
   
     function renderArticles(data) {
-     
   const container = document.querySelector(".articles-grid");
   container.innerHTML = "";
 
@@ -133,7 +132,7 @@
     link.target = "_blank";
     link.className = "article-card";
 
-    const safeImageURL = encodeURI(item.IMAGE); // Handles spaces
+    const safeImageURL = encodeURI(item.IMAGE);
 
     link.innerHTML = `
       <img 
