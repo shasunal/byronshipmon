@@ -455,6 +455,15 @@
     width: 18px;
     height: 18px;
   }
+  .article-card img {
+    height: auto;
+    max-height: 400px; /* or whatever fits best visually */
+    object-fit: contain;
+  }
+  .article-title {
+    margin-top: 16px;
+    min-height: unset;
+  }
 }
 
 
