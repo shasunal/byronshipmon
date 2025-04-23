@@ -1918,7 +1918,7 @@ textarea.w-select {
   position: relative;
   height: 100vh;
   overflow: hidden;
-  
+  padding-bottom: 0;
 }
 
 
