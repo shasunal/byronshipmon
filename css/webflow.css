@@ -1875,8 +1875,13 @@ textarea.w-select {
     padding-bottom: 0 !important;
     object-fit: contain; /* or cover, depending on the effect you want */
 }
-
+.w-button {
+  padding: 5px 10px !important;
+  font-size: 13px !important;
 }
+}
+
+
 /* Responsive tagline */
 .text-block-9 {
   font-size: 20px;
