@@ -463,6 +463,7 @@
   .article-title {
     margin-top: 16px;
     min-height: unset;
+    font-size: 20px;
   }
   .articles-grid {
     display: flex;
