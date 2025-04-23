@@ -1825,7 +1825,7 @@ textarea.w-select {
   }
   .heroimage,
   .herowrapper {
-    padding-top: 70px !important;
+    padding-top: 65px !important;
     margin-bottom: -50px !important;
     padding-bottom: 0 !important;
     height: auto !important;
@@ -1843,11 +1843,11 @@ textarea.w-select {
     padding-bottom: 0 !important;
     object-fit: cover; /* or cover, depending on the effect you want */
 }
-
+}
 
 @media screen and (max-width: 400px) {
   .heading {
-    font-size: 60px!important;
+    font-size: 55px!important;
     
   }
   .herowrapper {
@@ -1871,7 +1871,7 @@ textarea.w-select {
     object-fit: contain; /* or cover, depending on the effect you want */
 }
 
-
+}
 /* Responsive tagline */
 .text-block-9 {
   font-size: 20px;
