@@ -127,12 +127,21 @@
   const fallback = "https://via.placeholder.com/320x400?text=No+Image";
 
   try {
-  img.src = src ? src.replace(/ /g, "%20") : fallback;
-} catch (e) {
-  console.warn("Invalid image URL:", src);
-  img.src = fallback;
-}
+    if (src) {
+      // Encode only special characters, NOT the whole URL
+      const encodedSrc = src
+        .replace(/ /g, "%20")
+        .replace(/\(/g, "%28")
+        .replace(/\)/g, "%29");
 
+      img.src = encodedSrc;
+    } else {
+      img.src = fallback;
+    }
+  } catch (e) {
+    console.warn("Invalid image URL:", src);
+    img.src = fallback;
+  }
 
   img.alt = altText || "Article image";
   img.className = "article-img";
