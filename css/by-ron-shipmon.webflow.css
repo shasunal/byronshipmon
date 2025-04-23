@@ -323,13 +323,6 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.article-card hr {
-  margin-top: 6px;  /* or try even smaller */
-  margin-bottom: 0; /* keep it snug */
-  border: 0;
-  border-top: 1px solid #ccc;
-  width: 40%;
-}
 
 .article-card:hover {
   transform: scale(1.03);
