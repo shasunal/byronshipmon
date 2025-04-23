@@ -379,6 +379,14 @@ textarea.w-select {
   margin-bottom: 5px;
   padding-left: 20px;
 }
+
+.heading {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 100px; /* Optional: adjust to your liking */
+  letter-spacing: 1px; /* Optional: spacing between letters */
+  text-transform: uppercase; /* Optional: keep it all caps */
+}
 .w-radio:before,
 .w-radio:after {
   content: " ";
