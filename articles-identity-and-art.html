@@ -123,6 +123,26 @@
     });
   
     function renderArticles(data) {
+      const container = document.querySelector(".articles-grid");
+      container.innerHTML = "";
+  
+      data.forEach((item) => {
+        const link = document.createElement("a");
+        link.href = item.DOCUMENT;
+        link.target = "_blank";
+        link.className = "article-card";
+  
+        const safeImageURL = encodeURI(item.IMAGE); // ✅ encode spaces
+  
+        link.innerHTML = `
+          <img src="${safeImageURL}" alt="Article titled ${item.TITLE} by Ron Shipmon"
+               class="article-img" loading="lazy" decoding="async">
+          <h3 class="article-title">${item.TITLE}</h3>
+        `;
+  
+        container.appendChild(link);
+      });
+    }
   const container = document.querySelector(".articles-grid");
   container.innerHTML = "";
 
