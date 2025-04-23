@@ -1841,7 +1841,7 @@ textarea.w-select {
     max-height: 90vh; /* Try 80vh or 70vh if it's still too tall */
     margin-bottom: -50px !important;
     padding-bottom: 0 !important;
-    object-fit: contain; /* or cover, depending on the effect you want */
+    object-fit: cover; /* or cover, depending on the effect you want */
 }
 
 
