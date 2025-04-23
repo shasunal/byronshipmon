@@ -1930,3 +1930,8 @@ body, html {
   height: 100vh !important;
   overflow-x: hidden !important;
 }
+.heroimage {
+  height: 60vh; /* ✅ This is what shrinks it */
+  max-height: 600px; /* Optional limit for large screens */
+  overflow: hidden;
+}
