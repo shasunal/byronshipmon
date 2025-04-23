@@ -298,6 +298,14 @@
   }
 }
 
+.divider {
+  width: 30%;
+  margin: 0 auto 0.75rem;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+
 
 .article-card {
   display: flex;
@@ -330,17 +338,14 @@
 }
 
 .article-title {
-  font-family: "PT Sans", sans-serif;
+  font-family: "Lora", sans-serif;
 
   font-size: 1rem;
-  font-weight: 600;
-  margin-top: auto;
-  color: #222;
-  min-height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   text-align: center;
+  color: #222;
 }
 
 /* === CONTACT PAGE === */
