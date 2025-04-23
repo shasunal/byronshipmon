@@ -1825,8 +1825,9 @@ textarea.w-select {
   }
   .heroimage,
   .herowrapper {
-    /* adjust lower if needed */
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    height: auto !important;
   }
   html, body {
     height: auto !important;
@@ -1840,10 +1841,10 @@ textarea.w-select {
     font-size: 50px!important;
     
   }
-  .heroimage,
   .herowrapper {
-     /* adjust lower if needed */
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    height: auto !important;
   }
   html, body {
     height: auto !important;
@@ -1871,6 +1872,7 @@ textarea.w-select {
   .text-block-9 {
     font-size: 14px!important;
   }
+  
 }
 
 @media screen and (max-width: 400px) {
@@ -1879,3 +1881,10 @@ textarea.w-select {
   }
 }
 
+.herowrapper {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  height: auto !important;
+  overflow: hidden !important;
+  
+}
