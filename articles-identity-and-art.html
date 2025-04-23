@@ -133,9 +133,10 @@
         link.className = "article-card";
   
         link.innerHTML = `
-          <img src="${item.IMAGE}" alt="Article titled ${item.TITLE} by Ron Shipmon" class="article-img">
-          <h3 class="article-title">${item.TITLE}</h3>
-        `;
+  <img src="${item.IMAGE}" alt="Article titled ${item.TITLE} by Ron Shipmon" class="article-img" loading="lazy">
+  <h3 class="article-title">${item.TITLE}</h3>
+`;
+
   
         container.appendChild(link);
       });

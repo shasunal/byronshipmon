@@ -119,5 +119,7 @@
       "DOCUMENT": "https://byronshipmon.com/files/those_merchants_of_venice_1_.pdf",
       "TAGS": "Features"
     }
+
+    //copy the content inside {"TITLE:... "IMAGE"...}, including the brackets here.
   ]
   
