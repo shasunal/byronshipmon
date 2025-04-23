@@ -638,3 +638,19 @@
 .topbtn:hover {
   background-color: #4d6785;
 }
+
+@media screen and (max-width: 479px) {
+  .text-block-8 {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 90%;
+  }
+
+  .footersection {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
