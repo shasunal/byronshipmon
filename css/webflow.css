@@ -1833,6 +1833,14 @@ textarea.w-select {
     height: auto !important;
     min-height: auto !important;
   }
+  .heroimage {
+    display: block;
+    width: 100%;
+    height: auto !important;
+    max-height: 90vh; /* Try 80vh or 70vh if it's still too tall */
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    object-fit: contain; /* or cover, depending on the effect you want */
 }
 
 
@@ -1850,6 +1858,14 @@ textarea.w-select {
     height: auto !important;
     min-height: auto !important;
   }
+  .heroimage {
+    display: block;
+    width: 100%;
+    height: auto !important;
+    max-height: 90vh; /* Try 80vh or 70vh if it's still too tall */
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    object-fit: contain; /* or cover, depending on the effect you want */
 }
 
 
