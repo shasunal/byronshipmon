@@ -127,11 +127,12 @@
   const fallback = "https://via.placeholder.com/320x400?text=No+Image";
 
   try {
-    img.src = src ? encodeURI(src) : fallback;
-  } catch (e) {
-    console.warn("Invalid image URL:", src);
-    img.src = fallback;
-  }
+  img.src = src ? src.replace(/ /g, "%20") : fallback;
+} catch (e) {
+  console.warn("Invalid image URL:", src);
+  img.src = fallback;
+}
+
 
   img.alt = altText || "Article image";
   img.className = "article-img";
