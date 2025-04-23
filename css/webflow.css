@@ -1820,12 +1820,12 @@ textarea.w-select {
 
 @media screen and (max-width: 600px) {
   .heading {
-    font-size: 65px;
+    font-size: 65px!important;
     
   }
   .heroimage,
   .herowrapper {
-    padding-bottom: 40px; /* adjust lower if needed */
+    padding-bottom: 40px !important; /* adjust lower if needed */
     margin-bottom: 0;
   }
 }
@@ -1833,12 +1833,12 @@ textarea.w-select {
 
 @media screen and (max-width: 400px) {
   .heading {
-    font-size: 65px;
+    font-size: 65px!important;
     
   }
   .heroimage,
   .herowrapper {
-    padding-bottom: 40px; /* adjust lower if needed */
+    padding-bottom: 40px!important; /* adjust lower if needed */
     margin-bottom: 0;
   }
 }
@@ -1861,7 +1861,7 @@ textarea.w-select {
 
 @media screen and (max-width: 600px) {
   .text-block-9 {
-    font-size: 14px;
+    font-size: 14px!important;
   }
 }
 
