@@ -1908,3 +1908,17 @@ textarea.w-select {
   height: auto !important;
   min-height: unset !important;
 }
+
+.herowrapper {
+  overflow: hidden !important;
+  max-height: 100vh !important;
+  min-height: 100vh !important;
+  height: 100vh !important;
+}
+
+body, html {
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 100vh !important;
+  overflow-x: hidden !important;
+}
