@@ -542,6 +542,16 @@
   border-radius: 4px;
 }
 
+@media screen and (max-width: 479px) {
+  .image-6 {
+    width: 100%;
+    max-width: 90%;
+    height: auto;
+  }
+  
+}
+
+
 .text-block-7 {
   font-size: 0.85rem;
   color: #666;
