@@ -121,37 +121,43 @@
         })
         .catch((err) => console.error("❌ Failed to load JSON:", err));
     });
+
+    function createImageElement(src, altText) {
+  const img = document.createElement("img");
+  img.src = encodeURI(src); // ✅ handles spaces and special characters
+  img.alt = altText;
+  img.className = "article-img";
+  img.loading = "lazy";
+  img.decoding = "async";
+  img.onerror = function () {
+    this.src = "https://via.placeholder.com/320x400?text=No+Image";
+  };
+  return img;
+}
+
   
-    function renderArticles(data) {
+function renderArticles(data) {
   const container = document.querySelector(".articles-grid");
   container.innerHTML = "";
 
   data.forEach((item) => {
     const link = document.createElement("a");
-    link.href = item.DOCUMENT || "#"; // fallback if DOCUMENT is missing
+    link.href = item.DOCUMENT;
     link.target = "_blank";
     link.className = "article-card";
 
-    // Handle image URL safely (spaces, missing, etc.)
-    const imageUrl = item.IMAGE && item.IMAGE.trim() !== "" 
-      ? encodeURI(item.IMAGE) 
-      : "images/placeholder.png";
+    const img = createImageElement(item.IMAGE, `Article titled ${item.TITLE} by Ron Shipmon`);
+    const title = document.createElement("h3");
+    title.className = "article-title";
+    title.textContent = item.TITLE;
 
-    link.innerHTML = `
-      <img 
-        src="${imageUrl}" 
-        alt="Article titled ${item.TITLE || 'Untitled'} by Ron Shipmon" 
-        class="article-img"
-        loading="lazy" 
-        decoding="async"
-        onerror="this.src='images/placeholder.png';"
-      />
-      <h3 class="article-title">${item.TITLE || "Untitled"}</h3>
-    `;
-
+    link.appendChild(img);
+    link.appendChild(title);
     container.appendChild(link);
   });
 }
+
+
 
 
     
