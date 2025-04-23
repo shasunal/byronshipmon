@@ -1825,7 +1825,7 @@ textarea.w-select {
   }
   .heroimage,
   .herowrapper {
-    padding-top: 50px !important;
+    padding-top: 70px !important;
     margin-bottom: -50px !important;
     padding-bottom: 0 !important;
     height: auto !important;
@@ -1851,7 +1851,7 @@ textarea.w-select {
     
   }
   .herowrapper {
-    padding-top: 50px !important;
+    padding-top: 70px !important;
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
     height: auto !important;
@@ -1888,14 +1888,14 @@ textarea.w-select {
 
 @media screen and (max-width: 600px) {
   .text-block-9 {
-    font-size: 14px!important;
+    font-size: 20px!important;
   }
   
 }
 
 @media screen and (max-width: 400px) {
   .text-block-9 {
-    font-size: 12px;
+    font-size: 18px;
   }
 }
 
