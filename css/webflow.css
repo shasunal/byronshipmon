@@ -1916,7 +1916,6 @@ textarea.w-select {
   align-items: center; /* center everything horizontally */
   min-height: 40vh !important;
   max-height: 70vh !important;
-  padding-top: 70px;
   text-align: center;
   background-image: url('Breakers-1---18x24.avif');
   background-size: cover;
