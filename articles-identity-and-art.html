@@ -124,14 +124,23 @@
 
     function createImageElement(src, altText) {
   const img = document.createElement("img");
-  img.src = encodeURI(src); // ✅ handles spaces and special characters
-  img.alt = altText;
+  const fallback = "https://via.placeholder.com/320x400?text=No+Image";
+
+  try {
+    img.src = src ? encodeURI(src) : fallback;
+  } catch (e) {
+    console.warn("Invalid image URL:", src);
+    img.src = fallback;
+  }
+
+  img.alt = altText || "Article image";
   img.className = "article-img";
   img.loading = "lazy";
   img.decoding = "async";
   img.onerror = function () {
-    this.src = "https://via.placeholder.com/320x400?text=No+Image";
+    this.src = fallback;
   };
+
   return img;
 }
 
@@ -156,6 +165,7 @@ function renderArticles(data) {
     container.appendChild(link);
   });
 }
+
 
 
 
