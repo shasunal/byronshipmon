@@ -176,8 +176,9 @@
   }
 
   .heading {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin: 0;
+    padding-bottom: 20px;
   }
 
   .text-block-9 {
