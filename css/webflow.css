@@ -381,11 +381,10 @@ textarea.w-select {
 }
 
 .heading {
-  font-family: 'Arial Narrow', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 100px; /* Optional: adjust to your liking */
-  letter-spacing: 1px; /* Optional: spacing between letters */
-  text-transform: uppercase; /* Optional: keep it all caps */
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200; /* or 300 for slightly thicker */
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 .w-radio:before,
 .w-radio:after {
@@ -1796,10 +1795,10 @@ textarea.w-select {
 .wf-layout-layout {
   display: grid;
 }
-/* Responsive heading */
+/* Responsive heading with skinnier font */
 .heading {
-  font-family: 'Arial Narrow', Arial, sans-serif;
-  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200; /* lighter for a thinner look */
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
@@ -1830,6 +1829,7 @@ textarea.w-select {
     font-size: 36px;
   }
 }
+
 
 /* Responsive tagline */
 .text-block-9 {
