@@ -1825,7 +1825,7 @@ textarea.w-select {
   }
   .heroimage,
   .herowrapper {
-    padding-bottom: 40px !important; /* adjust lower if needed */
+    /* adjust lower if needed */
     margin-bottom: 0;
   }
   html, body {
@@ -1842,7 +1842,7 @@ textarea.w-select {
   }
   .heroimage,
   .herowrapper {
-    padding-bottom: 40px!important; /* adjust lower if needed */
+     /* adjust lower if needed */
     margin-bottom: 0;
   }
   html, body {
