@@ -123,26 +123,7 @@
     });
   
     function renderArticles(data) {
-      const container = document.querySelector(".articles-grid");
-      container.innerHTML = "";
-  
-      data.forEach((item) => {
-        const link = document.createElement("a");
-        link.href = item.DOCUMENT;
-        link.target = "_blank";
-        link.className = "article-card";
-  
-        const safeImageURL = encodeURI(item.IMAGE); // ✅ encode spaces
-  
-        link.innerHTML = `
-          <img src="${safeImageURL}" alt="Article titled ${item.TITLE} by Ron Shipmon"
-               class="article-img" loading="lazy" decoding="async">
-          <h3 class="article-title">${item.TITLE}</h3>
-        `;
-  
-        container.appendChild(link);
-      });
-    }
+      function renderArticles(data) {
   const container = document.querySelector(".articles-grid");
   container.innerHTML = "";
 
@@ -152,12 +133,11 @@
     link.target = "_blank";
     link.className = "article-card";
 
-    // ✅ Encode image URL for spaces and special characters
-    const encodedImageURL = encodeURI(item.IMAGE);
+    const safeImageURL = encodeURI(item.IMAGE); // Handles spaces
 
     link.innerHTML = `
       <img 
-        src="${encodedImageURL}" 
+        src="${safeImageURL}" 
         alt="Article titled ${item.TITLE} by Ron Shipmon" 
         class="article-img"
         loading="lazy" 
@@ -170,6 +150,9 @@
     container.appendChild(link);
   });
 }
+
+    }
+ 
 
   
     function setupFilterButtons() {
@@ -203,9 +186,6 @@
   
   
   
-  
-
-
 
 </body>
 </html>
