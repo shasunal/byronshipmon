@@ -1796,3 +1796,64 @@ textarea.w-select {
 .wf-layout-layout {
   display: grid;
 }
+/* Responsive heading */
+.heading {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 150px;
+}
+
+@media screen and (max-width: 1200px) {
+  .heading {
+    font-size: 100px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .heading {
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .heading {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .heading {
+    font-size: 36px;
+  }
+}
+
+/* Responsive tagline */
+.text-block-9 {
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+  margin-top: 10px;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .text-block-9 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .text-block-9 {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .text-block-9 {
+    font-size: 12px;
+  }
+}
