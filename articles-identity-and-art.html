@@ -128,27 +128,31 @@
 
   data.forEach((item) => {
     const link = document.createElement("a");
-    link.href = item.DOCUMENT;
+    link.href = item.DOCUMENT || "#"; // fallback if DOCUMENT is missing
     link.target = "_blank";
     link.className = "article-card";
 
-    const safeImageURL = encodeURI(item.IMAGE);
+    // Handle image URL safely (spaces, missing, etc.)
+    const imageUrl = item.IMAGE && item.IMAGE.trim() !== "" 
+      ? encodeURI(item.IMAGE) 
+      : "images/placeholder.png";
 
     link.innerHTML = `
       <img 
-        src="${safeImageURL}" 
-        alt="Article titled ${item.TITLE} by Ron Shipmon" 
+        src="${imageUrl}" 
+        alt="Article titled ${item.TITLE || 'Untitled'} by Ron Shipmon" 
         class="article-img"
         loading="lazy" 
         decoding="async"
         onerror="this.src='images/placeholder.png';"
       />
-      <h3 class="article-title">${item.TITLE}</h3>
+      <h3 class="article-title">${item.TITLE || "Untitled"}</h3>
     `;
 
     container.appendChild(link);
   });
 }
+
 
     
  
