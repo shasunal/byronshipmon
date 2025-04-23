@@ -1828,6 +1828,10 @@ textarea.w-select {
     padding-bottom: 40px !important; /* adjust lower if needed */
     margin-bottom: 0;
   }
+  html, body {
+    height: auto !important;
+    min-height: auto !important;
+  }
 }
 
 
@@ -1838,8 +1842,12 @@ textarea.w-select {
   }
   .heroimage,
   .herowrapper {
-    padding-bottom: 10px!important; /* adjust lower if needed */
+    padding-bottom: 40px!important; /* adjust lower if needed */
     margin-bottom: 0;
+  }
+  html, body {
+    height: auto !important;
+    min-height: auto !important;
   }
 }
 
@@ -1870,3 +1878,4 @@ textarea.w-select {
     font-size: 12px;
   }
 }
+
