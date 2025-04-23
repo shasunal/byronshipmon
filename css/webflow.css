@@ -1877,15 +1877,21 @@ textarea.w-select {
 }
 
 .herowrapper {
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden;
-  padding-bottom: 0;
-  background-size: cover;
-  text-align: center;
-  padding: 80px 20px;
-  justify-content: center;
-  background-image: url('Breakers-1---18x24.avif');
+  .herowrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* center everything vertically */
+    align-items: center; /* center everything horizontally */
+    min-height: 100vh;
+    padding: 80px 20px;
+    text-align: center;
+    background-image: url('Breakers-1---18x24.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+  }
 
 
 }
