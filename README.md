@@ -13,11 +13,11 @@ To add more Articles
 10. click submit changes
 
 
- To view html 
-homepage - index.html 
-articles - articles-identity-and-art.html
-about - about-ron-shipmon-arts-writer-cultural-commentator.html
-contact - contact-form.html
+ ---To view html ----
+**homepage** - index.html 
+**articles** - articles-identity-and-art.html
+**about** - about-ron-shipmon-arts-writer-cultural-commentator.html
+**contact** - contact-form.html
 
-to view css
+---to view css---
 by-ron-shipmon.webflow.css
