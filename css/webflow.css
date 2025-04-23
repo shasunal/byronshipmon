@@ -1820,9 +1820,16 @@ textarea.w-select {
 
 @media screen and (max-width: 600px) {
   .heading {
-    font-size: 50px;
+    font-size: 65px;
+    
+  }
+  .heroimage,
+  .herowrapper {
+    padding-bottom: 40px; /* adjust lower if needed */
+    margin-bottom: 0;
   }
 }
+
 
 @media screen and (max-width: 400px) {
   .heading {
