@@ -127,10 +127,10 @@
 
 @media screen and (max-width: 767px) {
   .heading {
-    font-size: 4.5rem;
+    font-size: 5rem;
     line-height: 1.2;
     margin: 0;
-    padding: 0;
+    padding-bottom: 20px;
   }
 
   .herowrapper {
