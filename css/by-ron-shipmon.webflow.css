@@ -566,13 +566,20 @@
 .text-block-8 {
   font-size: 1rem;
   color: #444;
-  line-height: 1.8;
+  line-height: 1.5;
   font-weight: 200;
   text-align: left;
   margin: 0 auto;
   max-width: 800px;
   padding-bottom: 0px;
+
 }
+
+.text-block-8 p{
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
 
 
 
